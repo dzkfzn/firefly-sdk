@@ -13,7 +13,7 @@
  */
 
 
-import type { Configuration } from './configuration';
+import type { Configuration as RawConfiguration  } from './configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
@@ -3209,10 +3209,10 @@ export interface Configuration {
 export interface ConfigurationSingle {
     /**
      * 
-     * @type {Configuration}
+     * @type {RawConfiguration }
      * @memberof ConfigurationSingle
      */
-    'data': Configuration;
+    'data': RawConfiguration ;
 }
 /**
  * 
@@ -9277,7 +9277,7 @@ export interface WebhookUpdate {
  * AboutApi - axios parameter creator
  * @export
  */
-export const AboutApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AboutApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Returns general system information and versions of the (supporting) software. 
@@ -9428,7 +9428,7 @@ export const AboutApiAxiosParamCreator = function (configuration?: Configuration
  * AboutApi - functional programming interface
  * @export
  */
-export const AboutApiFp = function(configuration?: Configuration) {
+export const AboutApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = AboutApiAxiosParamCreator(configuration)
     return {
         /**
@@ -9480,7 +9480,7 @@ export const AboutApiFp = function(configuration?: Configuration) {
  * AboutApi - factory interface
  * @export
  */
-export const AboutApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const AboutApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = AboutApiFp(configuration)
     return {
         /**
@@ -9572,7 +9572,7 @@ export class AboutApi extends BaseAPI {
  * AccountsApi - axios parameter creator
  * @export
  */
-export const AccountsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AccountsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Will permanently delete an account. Any associated transactions and piggy banks are ALSO deleted. Cannot be recovered from. 
@@ -10031,7 +10031,7 @@ export const AccountsApiAxiosParamCreator = function (configuration?: Configurat
  * AccountsApi - functional programming interface
  * @export
  */
-export const AccountsApiFp = function(configuration?: Configuration) {
+export const AccountsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = AccountsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -10167,7 +10167,7 @@ export const AccountsApiFp = function(configuration?: Configuration) {
  * AccountsApi - factory interface
  * @export
  */
-export const AccountsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const AccountsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = AccountsApiFp(configuration)
     return {
         /**
@@ -10407,7 +10407,7 @@ export class AccountsApi extends BaseAPI {
  * AttachmentsApi - axios parameter creator
  * @export
  */
-export const AttachmentsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AttachmentsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * With this endpoint you delete an attachment, including any stored file data. 
@@ -10756,7 +10756,7 @@ export const AttachmentsApiAxiosParamCreator = function (configuration?: Configu
  * AttachmentsApi - functional programming interface
  * @export
  */
-export const AttachmentsApiFp = function(configuration?: Configuration) {
+export const AttachmentsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = AttachmentsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -10867,7 +10867,7 @@ export const AttachmentsApiFp = function(configuration?: Configuration) {
  * AttachmentsApi - factory interface
  * @export
  */
-export const AttachmentsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const AttachmentsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = AttachmentsApiFp(configuration)
     return {
         /**
@@ -11061,7 +11061,7 @@ export class AttachmentsApi extends BaseAPI {
  * AutocompleteApi - axios parameter creator
  * @export
  */
-export const AutocompleteApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AutocompleteApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * 
@@ -11912,7 +11912,7 @@ export const AutocompleteApiAxiosParamCreator = function (configuration?: Config
  * AutocompleteApi - functional programming interface
  * @export
  */
-export const AutocompleteApiFp = function(configuration?: Configuration) {
+export const AutocompleteApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = AutocompleteApiAxiosParamCreator(configuration)
     return {
         /**
@@ -12164,7 +12164,7 @@ export const AutocompleteApiFp = function(configuration?: Configuration) {
  * AutocompleteApi - factory interface
  * @export
  */
-export const AutocompleteApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const AutocompleteApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = AutocompleteApiFp(configuration)
     return {
         /**
@@ -12604,7 +12604,7 @@ export class AutocompleteApi extends BaseAPI {
  * AvailableBudgetsApi - axios parameter creator
  * @export
  */
-export const AvailableBudgetsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AvailableBudgetsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Get a single available budget, by ID.
@@ -12725,7 +12725,7 @@ export const AvailableBudgetsApiAxiosParamCreator = function (configuration?: Co
  * AvailableBudgetsApi - functional programming interface
  * @export
  */
-export const AvailableBudgetsApiFp = function(configuration?: Configuration) {
+export const AvailableBudgetsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = AvailableBudgetsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -12766,7 +12766,7 @@ export const AvailableBudgetsApiFp = function(configuration?: Configuration) {
  * AvailableBudgetsApi - factory interface
  * @export
  */
-export const AvailableBudgetsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const AvailableBudgetsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = AvailableBudgetsApiFp(configuration)
     return {
         /**
@@ -12840,7 +12840,7 @@ export class AvailableBudgetsApi extends BaseAPI {
  * BillsApi - axios parameter creator
  * @export
  */
-export const BillsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const BillsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a bill. This will not delete any associated rules. Will not remove associated transactions. WILL remove all associated attachments.
@@ -13298,7 +13298,7 @@ export const BillsApiAxiosParamCreator = function (configuration?: Configuration
  * BillsApi - functional programming interface
  * @export
  */
-export const BillsApiFp = function(configuration?: Configuration) {
+export const BillsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = BillsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -13433,7 +13433,7 @@ export const BillsApiFp = function(configuration?: Configuration) {
  * BillsApi - factory interface
  * @export
  */
-export const BillsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const BillsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = BillsApiFp(configuration)
     return {
         /**
@@ -13671,7 +13671,7 @@ export class BillsApi extends BaseAPI {
  * BudgetsApi - axios parameter creator
  * @export
  */
-export const BudgetsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const BudgetsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a budget. Transactions will not be deleted.
@@ -14542,7 +14542,7 @@ export const BudgetsApiAxiosParamCreator = function (configuration?: Configurati
  * BudgetsApi - functional programming interface
  * @export
  */
-export const BudgetsApiFp = function(configuration?: Configuration) {
+export const BudgetsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = BudgetsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -14790,7 +14790,7 @@ export const BudgetsApiFp = function(configuration?: Configuration) {
  * BudgetsApi - factory interface
  * @export
  */
-export const BudgetsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const BudgetsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = BudgetsApiFp(configuration)
     return {
         /**
@@ -15226,7 +15226,7 @@ export class BudgetsApi extends BaseAPI {
  * CategoriesApi - axios parameter creator
  * @export
  */
-export const CategoriesApiAxiosParamCreator = function (configuration?: Configuration) {
+export const CategoriesApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a category. Transactions will not be removed.
@@ -15624,7 +15624,7 @@ export const CategoriesApiAxiosParamCreator = function (configuration?: Configur
  * CategoriesApi - functional programming interface
  * @export
  */
-export const CategoriesApiFp = function(configuration?: Configuration) {
+export const CategoriesApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = CategoriesApiAxiosParamCreator(configuration)
     return {
         /**
@@ -15743,7 +15743,7 @@ export const CategoriesApiFp = function(configuration?: Configuration) {
  * CategoriesApi - factory interface
  * @export
  */
-export const CategoriesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const CategoriesApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = CategoriesApiFp(configuration)
     return {
         /**
@@ -15953,7 +15953,7 @@ export class CategoriesApi extends BaseAPI {
  * ChartsApi - axios parameter creator
  * @export
  */
-export const ChartsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const ChartsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * This endpoint returns the data required to generate a chart with basic asset account balance information. 
@@ -16022,7 +16022,7 @@ export const ChartsApiAxiosParamCreator = function (configuration?: Configuratio
  * ChartsApi - functional programming interface
  * @export
  */
-export const ChartsApiFp = function(configuration?: Configuration) {
+export const ChartsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = ChartsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -16047,7 +16047,7 @@ export const ChartsApiFp = function(configuration?: Configuration) {
  * ChartsApi - factory interface
  * @export
  */
-export const ChartsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const ChartsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ChartsApiFp(configuration)
     return {
         /**
@@ -16093,7 +16093,7 @@ export class ChartsApi extends BaseAPI {
  * ConfigurationApi - axios parameter creator
  * @export
  */
-export const ConfigurationApiAxiosParamCreator = function (configuration?: Configuration) {
+export const ConfigurationApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Returns all editable and not-editable configuration values for this Firefly III installation
@@ -16247,7 +16247,7 @@ export const ConfigurationApiAxiosParamCreator = function (configuration?: Confi
  * ConfigurationApi - functional programming interface
  * @export
  */
-export const ConfigurationApiFp = function(configuration?: Configuration) {
+export const ConfigurationApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = ConfigurationApiAxiosParamCreator(configuration)
     return {
         /**
@@ -16257,7 +16257,7 @@ export const ConfigurationApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getConfiguration(xTraceId?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Configuration>>> {
+        async getConfiguration(xTraceId?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RawConfiguration >>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getConfiguration(xTraceId, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ConfigurationApi.getConfiguration']?.[localVarOperationServerIndex]?.url;
@@ -16299,7 +16299,7 @@ export const ConfigurationApiFp = function(configuration?: Configuration) {
  * ConfigurationApi - factory interface
  * @export
  */
-export const ConfigurationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const ConfigurationApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ConfigurationApiFp(configuration)
     return {
         /**
@@ -16309,7 +16309,7 @@ export const ConfigurationApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getConfiguration(xTraceId?: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<Configuration>> {
+        getConfiguration(xTraceId?: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<RawConfiguration >> {
             return localVarFp.getConfiguration(xTraceId, options).then((request) => request(axios, basePath));
         },
         /**
@@ -16391,7 +16391,7 @@ export class ConfigurationApi extends BaseAPI {
  * CurrenciesApi - axios parameter creator
  * @export
  */
-export const CurrenciesApiAxiosParamCreator = function (configuration?: Configuration) {
+export const CurrenciesApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Make this currency the default currency for the user. If the currency is not enabled, it will be enabled as well.
@@ -17261,7 +17261,7 @@ export const CurrenciesApiAxiosParamCreator = function (configuration?: Configur
  * CurrenciesApi - functional programming interface
  * @export
  */
-export const CurrenciesApiFp = function(configuration?: Configuration) {
+export const CurrenciesApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = CurrenciesApiAxiosParamCreator(configuration)
     return {
         /**
@@ -17517,7 +17517,7 @@ export const CurrenciesApiFp = function(configuration?: Configuration) {
  * CurrenciesApi - factory interface
  * @export
  */
-export const CurrenciesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const CurrenciesApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = CurrenciesApiFp(configuration)
     return {
         /**
@@ -17965,7 +17965,7 @@ export class CurrenciesApi extends BaseAPI {
  * CurrencyExchangeRatesApi - axios parameter creator
  * @export
  */
-export const CurrencyExchangeRatesApiAxiosParamCreator = function (configuration?: Configuration) {
+export const CurrencyExchangeRatesApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a specific currency exchange rate.
@@ -18293,7 +18293,7 @@ export const CurrencyExchangeRatesApiAxiosParamCreator = function (configuration
  * CurrencyExchangeRatesApi - functional programming interface
  * @export
  */
-export const CurrencyExchangeRatesApiFp = function(configuration?: Configuration) {
+export const CurrencyExchangeRatesApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = CurrencyExchangeRatesApiAxiosParamCreator(configuration)
     return {
         /**
@@ -18395,7 +18395,7 @@ export const CurrencyExchangeRatesApiFp = function(configuration?: Configuration
  * CurrencyExchangeRatesApi - factory interface
  * @export
  */
-export const CurrencyExchangeRatesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const CurrencyExchangeRatesApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = CurrencyExchangeRatesApiFp(configuration)
     return {
         /**
@@ -18575,7 +18575,7 @@ export class CurrencyExchangeRatesApi extends BaseAPI {
  * DataApi - axios parameter creator
  * @export
  */
-export const DataApiAxiosParamCreator = function (configuration?: Configuration) {
+export const DataApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Allows you to update transactions in bulk. 
@@ -19170,7 +19170,7 @@ export const DataApiAxiosParamCreator = function (configuration?: Configuration)
  * DataApi - functional programming interface
  * @export
  */
-export const DataApiFp = function(configuration?: Configuration) {
+export const DataApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = DataApiAxiosParamCreator(configuration)
     return {
         /**
@@ -19350,7 +19350,7 @@ export const DataApiFp = function(configuration?: Configuration) {
  * DataApi - factory interface
  * @export
  */
-export const DataApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const DataApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = DataApiFp(configuration)
     return {
         /**
@@ -19662,7 +19662,7 @@ export class DataApi extends BaseAPI {
  * InsightApi - axios parameter creator
  * @export
  */
-export const InsightApiAxiosParamCreator = function (configuration?: Configuration) {
+export const InsightApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * This endpoint gives a summary of the expenses made by the user, grouped by asset account. 
@@ -21271,7 +21271,7 @@ export const InsightApiAxiosParamCreator = function (configuration?: Configurati
  * InsightApi - functional programming interface
  * @export
  */
-export const InsightApiFp = function(configuration?: Configuration) {
+export const InsightApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = InsightApiAxiosParamCreator(configuration)
     return {
         /**
@@ -21673,7 +21673,7 @@ export const InsightApiFp = function(configuration?: Configuration) {
  * InsightApi - factory interface
  * @export
  */
-export const InsightApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const InsightApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = InsightApiFp(configuration)
     return {
         /**
@@ -22381,7 +22381,7 @@ export class InsightApi extends BaseAPI {
  * LinksApi - axios parameter creator
  * @export
  */
-export const LinksApiAxiosParamCreator = function (configuration?: Configuration) {
+export const LinksApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Will permanently delete a link type. The links between transactions will be removed. The transactions themselves remain. You cannot delete some of the system provided link types, indicated by the editable=false flag when you list it. 
@@ -23005,7 +23005,7 @@ export const LinksApiAxiosParamCreator = function (configuration?: Configuration
  * LinksApi - functional programming interface
  * @export
  */
-export const LinksApiFp = function(configuration?: Configuration) {
+export const LinksApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = LinksApiAxiosParamCreator(configuration)
     return {
         /**
@@ -23193,7 +23193,7 @@ export const LinksApiFp = function(configuration?: Configuration) {
  * LinksApi - factory interface
  * @export
  */
-export const LinksApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const LinksApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = LinksApiFp(configuration)
     return {
         /**
@@ -23521,7 +23521,7 @@ export class LinksApi extends BaseAPI {
  * ObjectGroupsApi - axios parameter creator
  * @export
  */
-export const ObjectGroupsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const ObjectGroupsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a object group.
@@ -23838,7 +23838,7 @@ export const ObjectGroupsApiAxiosParamCreator = function (configuration?: Config
  * ObjectGroupsApi - functional programming interface
  * @export
  */
-export const ObjectGroupsApiFp = function(configuration?: Configuration) {
+export const ObjectGroupsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = ObjectGroupsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -23938,7 +23938,7 @@ export const ObjectGroupsApiFp = function(configuration?: Configuration) {
  * ObjectGroupsApi - factory interface
  * @export
  */
-export const ObjectGroupsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const ObjectGroupsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ObjectGroupsApiFp(configuration)
     return {
         /**
@@ -24114,7 +24114,7 @@ export class ObjectGroupsApi extends BaseAPI {
  * PiggyBanksApi - axios parameter creator
  * @export
  */
-export const PiggyBanksApiAxiosParamCreator = function (configuration?: Configuration) {
+export const PiggyBanksApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a piggy bank.
@@ -24479,7 +24479,7 @@ export const PiggyBanksApiAxiosParamCreator = function (configuration?: Configur
  * PiggyBanksApi - functional programming interface
  * @export
  */
-export const PiggyBanksApiFp = function(configuration?: Configuration) {
+export const PiggyBanksApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = PiggyBanksApiAxiosParamCreator(configuration)
     return {
         /**
@@ -24593,7 +24593,7 @@ export const PiggyBanksApiFp = function(configuration?: Configuration) {
  * PiggyBanksApi - factory interface
  * @export
  */
-export const PiggyBanksApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const PiggyBanksApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PiggyBanksApiFp(configuration)
     return {
         /**
@@ -24793,7 +24793,7 @@ export class PiggyBanksApi extends BaseAPI {
  * PreferencesApi - axios parameter creator
  * @export
  */
-export const PreferencesApiAxiosParamCreator = function (configuration?: Configuration) {
+export const PreferencesApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Return a single preference and the value.
@@ -25000,7 +25000,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
  * PreferencesApi - functional programming interface
  * @export
  */
-export const PreferencesApiFp = function(configuration?: Configuration) {
+export const PreferencesApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = PreferencesApiAxiosParamCreator(configuration)
     return {
         /**
@@ -25068,7 +25068,7 @@ export const PreferencesApiFp = function(configuration?: Configuration) {
  * PreferencesApi - factory interface
  * @export
  */
-export const PreferencesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const PreferencesApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PreferencesApiFp(configuration)
     return {
         /**
@@ -25188,7 +25188,7 @@ export class PreferencesApi extends BaseAPI {
  * RecurrencesApi - axios parameter creator
  * @export
  */
-export const RecurrencesApiAxiosParamCreator = function (configuration?: Configuration) {
+export const RecurrencesApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a recurring transaction. Transactions created by the recurring transaction will not be deleted.
@@ -25516,7 +25516,7 @@ export const RecurrencesApiAxiosParamCreator = function (configuration?: Configu
  * RecurrencesApi - functional programming interface
  * @export
  */
-export const RecurrencesApiFp = function(configuration?: Configuration) {
+export const RecurrencesApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = RecurrencesApiAxiosParamCreator(configuration)
     return {
         /**
@@ -25617,7 +25617,7 @@ export const RecurrencesApiFp = function(configuration?: Configuration) {
  * RecurrencesApi - factory interface
  * @export
  */
-export const RecurrencesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const RecurrencesApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = RecurrencesApiFp(configuration)
     return {
         /**
@@ -25795,7 +25795,7 @@ export class RecurrencesApi extends BaseAPI {
  * RuleGroupsApi - axios parameter creator
  * @export
  */
-export const RuleGroupsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const RuleGroupsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a rule group.
@@ -26254,7 +26254,7 @@ export const RuleGroupsApiAxiosParamCreator = function (configuration?: Configur
  * RuleGroupsApi - functional programming interface
  * @export
  */
-export const RuleGroupsApiFp = function(configuration?: Configuration) {
+export const RuleGroupsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = RuleGroupsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -26390,7 +26390,7 @@ export const RuleGroupsApiFp = function(configuration?: Configuration) {
  * RuleGroupsApi - factory interface
  * @export
  */
-export const RuleGroupsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const RuleGroupsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = RuleGroupsApiFp(configuration)
     return {
         /**
@@ -26630,7 +26630,7 @@ export class RuleGroupsApi extends BaseAPI {
  * RulesApi - axios parameter creator
  * @export
  */
-export const RulesApiAxiosParamCreator = function (configuration?: Configuration) {
+export const RulesApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete an rule.
@@ -27013,7 +27013,7 @@ export const RulesApiAxiosParamCreator = function (configuration?: Configuration
  * RulesApi - functional programming interface
  * @export
  */
-export const RulesApiFp = function(configuration?: Configuration) {
+export const RulesApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = RulesApiAxiosParamCreator(configuration)
     return {
         /**
@@ -27129,7 +27129,7 @@ export const RulesApiFp = function(configuration?: Configuration) {
  * RulesApi - factory interface
  * @export
  */
-export const RulesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const RulesApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = RulesApiFp(configuration)
     return {
         /**
@@ -27333,7 +27333,7 @@ export class RulesApi extends BaseAPI {
  * SearchApi - axios parameter creator
  * @export
  */
-export const SearchApiAxiosParamCreator = function (configuration?: Configuration) {
+export const SearchApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Search for accounts
@@ -27472,7 +27472,7 @@ export const SearchApiAxiosParamCreator = function (configuration?: Configuratio
  * SearchApi - functional programming interface
  * @export
  */
-export const SearchApiFp = function(configuration?: Configuration) {
+export const SearchApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = SearchApiAxiosParamCreator(configuration)
     return {
         /**
@@ -27516,7 +27516,7 @@ export const SearchApiFp = function(configuration?: Configuration) {
  * SearchApi - factory interface
  * @export
  */
-export const SearchApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const SearchApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = SearchApiFp(configuration)
     return {
         /**
@@ -27596,7 +27596,7 @@ export class SearchApi extends BaseAPI {
  * SummaryApi - axios parameter creator
  * @export
  */
-export const SummaryApiAxiosParamCreator = function (configuration?: Configuration) {
+export const SummaryApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Returns basic sums of the users data, like the net worth, spent and earned amounts. It is multi-currency, and is used in Firefly III to populate the dashboard. 
@@ -27670,7 +27670,7 @@ export const SummaryApiAxiosParamCreator = function (configuration?: Configurati
  * SummaryApi - functional programming interface
  * @export
  */
-export const SummaryApiFp = function(configuration?: Configuration) {
+export const SummaryApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = SummaryApiAxiosParamCreator(configuration)
     return {
         /**
@@ -27696,7 +27696,7 @@ export const SummaryApiFp = function(configuration?: Configuration) {
  * SummaryApi - factory interface
  * @export
  */
-export const SummaryApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const SummaryApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = SummaryApiFp(configuration)
     return {
         /**
@@ -27744,7 +27744,7 @@ export class SummaryApi extends BaseAPI {
  * TagsApi - axios parameter creator
  * @export
  */
-export const TagsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const TagsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete an tag.
@@ -28138,7 +28138,7 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
  * TagsApi - functional programming interface
  * @export
  */
-export const TagsApiFp = function(configuration?: Configuration) {
+export const TagsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = TagsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -28257,7 +28257,7 @@ export const TagsApiFp = function(configuration?: Configuration) {
  * TagsApi - factory interface
  * @export
  */
-export const TagsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const TagsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = TagsApiFp(configuration)
     return {
         /**
@@ -28467,7 +28467,7 @@ export class TagsApi extends BaseAPI {
  * TransactionsApi - axios parameter creator
  * @export
  */
-export const TransactionsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const TransactionsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a transaction.
@@ -28999,7 +28999,7 @@ export const TransactionsApiAxiosParamCreator = function (configuration?: Config
  * TransactionsApi - functional programming interface
  * @export
  */
-export const TransactionsApiFp = function(configuration?: Configuration) {
+export const TransactionsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = TransactionsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -29160,7 +29160,7 @@ export const TransactionsApiFp = function(configuration?: Configuration) {
  * TransactionsApi - factory interface
  * @export
  */
-export const TransactionsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const TransactionsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = TransactionsApiFp(configuration)
     return {
         /**
@@ -29442,7 +29442,7 @@ export class TransactionsApi extends BaseAPI {
  * UserGroupsApi - axios parameter creator
  * @export
  */
-export const UserGroupsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const UserGroupsApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Returns a single user group by its ID. 
@@ -29601,7 +29601,7 @@ export const UserGroupsApiAxiosParamCreator = function (configuration?: Configur
  * UserGroupsApi - functional programming interface
  * @export
  */
-export const UserGroupsApiFp = function(configuration?: Configuration) {
+export const UserGroupsApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = UserGroupsApiAxiosParamCreator(configuration)
     return {
         /**
@@ -29655,7 +29655,7 @@ export const UserGroupsApiFp = function(configuration?: Configuration) {
  * UserGroupsApi - factory interface
  * @export
  */
-export const UserGroupsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const UserGroupsApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = UserGroupsApiFp(configuration)
     return {
         /**
@@ -29751,7 +29751,7 @@ export class UserGroupsApi extends BaseAPI {
  * UsersApi - axios parameter creator
  * @export
  */
-export const UsersApiAxiosParamCreator = function (configuration?: Configuration) {
+export const UsersApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a user. You cannot delete the user you\'re authenticated with. This cannot be undone. Be careful!
@@ -30004,7 +30004,7 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
  * UsersApi - functional programming interface
  * @export
  */
-export const UsersApiFp = function(configuration?: Configuration) {
+export const UsersApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = UsersApiAxiosParamCreator(configuration)
     return {
         /**
@@ -30086,7 +30086,7 @@ export const UsersApiFp = function(configuration?: Configuration) {
  * UsersApi - factory interface
  * @export
  */
-export const UsersApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const UsersApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = UsersApiFp(configuration)
     return {
         /**
@@ -30230,7 +30230,7 @@ export class UsersApi extends BaseAPI {
  * WebhooksApi - axios parameter creator
  * @export
  */
-export const WebhooksApiAxiosParamCreator = function (configuration?: Configuration) {
+export const WebhooksApiAxiosParamCreator = function (configuration?: RawConfiguration ) {
     return {
         /**
          * Delete a webhook.
@@ -30893,7 +30893,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
  * WebhooksApi - functional programming interface
  * @export
  */
-export const WebhooksApiFp = function(configuration?: Configuration) {
+export const WebhooksApiFp = function(configuration?: RawConfiguration ) {
     const localVarAxiosParamCreator = WebhooksApiAxiosParamCreator(configuration)
     return {
         /**
@@ -31097,7 +31097,7 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
  * WebhooksApi - factory interface
  * @export
  */
-export const WebhooksApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const WebhooksApiFactory = function (configuration?: RawConfiguration , basePath?: string, axios?: AxiosInstance) {
     const localVarFp = WebhooksApiFp(configuration)
     return {
         /**
